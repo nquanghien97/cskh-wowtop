@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Form, Input, Modal } from 'antd'
 import { toast } from 'react-toastify'
 import { changeMyPassword } from '@/services/me'
-import LoadingIcon from '@/assets/icons/LoadingIcon'
+import LoadingIcon from '@/components/LoadingIcon'
 
 interface ChangePasswordProps {
   open: boolean

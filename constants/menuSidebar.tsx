@@ -20,7 +20,7 @@ export interface MenuType {
 export const menuSidebar: MenuType[] = [
   {
     title: 'LẦN I',
-    url: '/lan-1',
+    url: '#',
     icon: <ChildrenIcon width={16} height={16} />,
     allowRole: ['ADMIN', 'USER'],
     children: [

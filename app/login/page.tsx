@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import { useAuthStore } from '@/stores/auth.store';
 import Image from 'next/image';
 import { Button, Input } from 'antd';
-import LoadingIcon from '@/assets/icons/LoadingIcon';
+import LoadingIcon from '@/components/LoadingIcon';
 
 function Login() {
 
