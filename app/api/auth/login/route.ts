@@ -29,7 +29,6 @@ export async function POST(req: NextRequest) {
     }
 
     const passwordValidated = await bcrypt.compare(password, user.password);
-    console.log(passwordValidated);
     if (!passwordValidated) {
       return NextResponse.json({
         success: false,

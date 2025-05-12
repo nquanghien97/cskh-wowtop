@@ -1,6 +1,6 @@
 import BanIcon from "@/assets/icons/BanIcon";
-import ChildrenIcon from "@/assets/icons/ChildrenIcon";
-import DocumentIcon from "@/assets/icons/DocumentIcon";
+// import ChildrenIcon from "@/assets/icons/ChildrenIcon";
+// import DocumentIcon from "@/assets/icons/DocumentIcon";
 import FilesIcon from "@/assets/icons/FilesIcon";
 // import FeedbackIcon from "@/assets/icons/FeedbackIcon";
 // import PolicyIcon from "@/assets/icons/PolicyIcon";
@@ -21,7 +21,7 @@ export const menuSidebar: MenuType[] = [
   {
     title: 'LẦN I',
     url: '#',
-    icon: <ChildrenIcon width={16} height={16} />,
+    icon: <FilesIcon width={16} height={16} />,
     allowRole: ['ADMIN', 'USER'],
     children: [
       {
@@ -45,8 +45,8 @@ export const menuSidebar: MenuType[] = [
     allowRole: ['ADMIN', 'USER']
   },
   {
-    title: 'FEEDBACK',
-    url: '/feedback',
+    title: 'FEEDBACKS',
+    url: '/feedbacks',
     icon: <WomenIcon width={16} height={16} />,
     allowRole: ['ADMIN', 'USER']
   },
@@ -99,16 +99,4 @@ export const menuSidebar: MenuType[] = [
   //     },
   //   ]
   // },
-  {
-    title: 'HƯỚNG DẪN SỬ DỤNG SỮA',
-    url: '/huong-dan-su-dung-sua',
-    icon: <DocumentIcon width={16} height={16} />,
-    allowRole: ['ADMIN', 'USER']
-  },
-  {
-    title: 'Hồ sơ khách hàng',
-    url: '/ho-so-khach-hang',
-    icon: <FilesIcon width={16} height={16} />,
-    allowRole: ['ADMIN', 'USER'],
-  },
 ]

@@ -75,6 +75,224 @@ export const data = {
         'Đánh giá sau 3 tháng liên tục sử dụng sữa và chế độ dinh dưỡng mới.'
       ]
     }
-  }
+  },
+
   // Sức đề kháng
+  suc_de_khang: {
+    be_hay_bi_om_vat: {
+      title: 'Bé hay bị ốm vặt',
+      tinh_huong_thuong_gap: [
+        '1 tháng ốm >= 2 lần (sổ mũi, ho nhẹ).',
+        'Bé dễ cảm lạnh khi thay đổi thời tiết.'
+      ],
+      nguyen_nhan: [
+        'Thiếu vi chất nuôi dưỡng hệ miễn dịch. các vi chất nuôi dưỡng hệ miễn dịch là các protein có nhiều trong nhóm đạm: thịt, cá, trứng, sữa',
+        'Phế khí kém do quá trình sinh non hoặc sự dinh dưỡng chưa đầy đủ từ bào thai.'
+      ],
+      giai_phap: [
+        'Duy trì uống đủ sữa WOWTOP đều đặn (2 lần/ngày).',
+        'Tăng thêm nhóm vitamin C tự nhiên (cam, quýt, kiwi, ổi).',
+        'Có thể bổ sung sản phẩm tăng đề kháng chứa kẽm, beta-glucan, vitamin C nếu cần.'
+      ],
+      luu_y: [
+        'Nhắc phụ huynh cho bé vận động ngoài trời nhẹ nhàng.',
+        'Theo dõi sau 2-3 tháng.'
+      ]
+    },
+    be_mac_benh_duong_ho_hap_man_tinh: {
+      title: 'Bé mắc bệnh đường hô hấp mạn tính (viêm mũi, viêm phế quản tái đi tái lại)',
+      tinh_huong_thuong_gap: [
+        'Bé ho kéo dài, chảy mũi, khò khè từng đợt.',
+      ],
+      nguyen_nhan: [
+        'Thiếu vi chất nuôi dưỡng hệ miễn dịch. các vi chất nuôi dưỡng hệ miễn dịch là các protein có nhiều trong nhóm đạm: thịt, cá, trứng, sữa',
+        'Phế khí kém do quá trình sinh non hoặc sự dinh dưỡng chưa đầy đủ từ bào thai.'
+      ],
+      giai_phap: [
+        'Duy trì WOWTOP để tối ưu hấp thu dưỡng chất nền tảng.',
+        'Ưu tiên thêm thực phẩm giàu omega-3 tự nhiên (cá hồi, hạt chia).',
+        'Cân nhắc bổ sung lợi khuẩn đường ruột hỗ trợ miễn dịch (Probiotic).'
+      ],
+      luu_y: [
+        'Luôn nhắc phụ huynh thăm khám định kỳ nếu triệu chứng kéo dài.',
+        'Hạn chế tiếp xúc khói bụi, lông vật nuôi.'
+      ]
+    },
+    be_suc_de_khang_kem_hay_met_moi: {
+      title: 'Bé sức đề kháng kém, hay mệt mỏi',
+      tinh_huong_thuong_gap: [
+        'Bé ít vận động, hay than mệt.',
+        'Dễ mắc các bệnh vặt.'
+      ],
+      nguyen_nhan: [
+        'Thiếu vi chất nuôi dưỡng hệ miễn dịch. các vi chất nuôi dưỡng hệ miễn dịch là các protein có nhiều trong nhóm đạm: thịt, cá, trứng, sữa',
+        'Phế khí kém do quá trình sinh non hoặc sự dinh dưỡng chưa đầy đủ từ bào thai.'
+      ],
+      giai_phap: [
+        'Duy trì WOWTOP để tối ưu hấp thu dưỡng chất nền tảng.',
+        'Bổ sung thêm nhóm B-complex, kẽm.',
+        'Khuyến khích bé vận động ngoài trời (ít nhất 30 phút/ngày).'
+      ],
+      luu_y: [
+        'Đánh giá lại giấc ngủ bé: đảm bảo ngủ đủ 9-10h/ngày.'
+      ]
+    },
+  },
+
+  // Bất ổn về giấc ngủ
+  bat_on_ve_giac_ngu: {
+    be_kho_ngu_ngu_khong_sau_giac: {
+      title: 'Bé khó ngủ, ngủ không sâu giấc',
+      tinh_huong_thuong_gap: [
+        'Bé lăn lộn lâu mới ngủ, hay tỉnh giấc giữa đêm.',
+        'Bé ngủ chập chờn, quấy khóc đêm.'
+      ],
+      nguyen_nhan: [
+        'Đến từ sự bất ổn về cảm xúc trong quá trình người lớn tương tác với trẻ nhỏ. tạo sự rối loạn các xung động thần kinh ở tim và não',
+      ],
+      giai_phap: [
+        'Tiếp tục duy trì uống sữa WOWTOP vì có nền dưỡng chất hỗ trợ ổn định thần kinh (B-complex, khoáng chất).',
+        'Bổ sung thêm magie tự nhiên qua thực phẩm (chuối, bơ, hạnh nhân).',
+        'Tạo thói quen thư giãn trước ngủ: tắt TV, đọc sách nhẹ, massage nhẹ.'
+      ],
+      luu_y: [
+        'Nhắc ba mẹ: cố định giờ ngủ hàng ngày, không cho bé ăn quá no hoặc dùng thiết bị điện tử sát giờ ngủ.'
+      ]
+    }
+  },
+
+  // Bất ổn về tinh thần
+  bat_on_ve_tinh_than: {
+    be_cang_thang_de_cau_gat: {
+      title: 'Bé căng thẳng, dễ cáu gắt',
+      tinh_huong_thuong_gap: [
+        'Bé hay cáu bẳn, giận dỗi vô cớ.',
+        'Bé học hành chịu áp lực.'
+      ],
+      nguyen_nhan: [
+        'Đến từ sự bất ổn về cảm xúc trong quá trình người lớn tương tác với trẻ nhỏ. tạo sự rối loạn các xung động thần kinh ở tim và não',
+      ],
+      giai_phap: [
+        'Dinh dưỡng từ WOWTOP hỗ trợ cân bằng năng lượng.',
+        'Tăng thêm thực phẩm giàu tryptophan tự nhiên (yến mạch, hạnh nhân, trứng).',
+        'Nếu cần có thể tư vấn thêm sp bổ sung nhóm vitamin nhóm B, Omega-3 nhẹ.'
+      ],
+      luu_y: [
+        'Khuyến khích các hoạt động ngoài trời, vẽ tranh, chơi thể thao nhẹ để cân bằng tâm trạng.'
+      ]
+    },
+    be_lo_do_thieu_tap_trung: {
+      title: 'Bé lờ đờ, thiếu tập trung',
+      tinh_huong_thuong_gap: [
+        'Bé học hành không tập trung.',
+        'Bé hay buồn ngủ ban ngày.'
+      ],
+      nguyen_nhan: [
+        'Đến từ sự bất ổn về cảm xúc trong quá trình người lớn tương tác với trẻ nhỏ. tạo sự rối loạn các xung động thần kinh ở tim và não',
+      ],
+      giai_phap: [
+        'Tiếp tục uống WOWTOP đều đặn để bù nền dưỡng chất.',
+        'Ăn sáng đủ chất mỗi ngày.',
+        'Cân chỉnh giờ ngủ-ngủ sớm (trước 21h).',
+        'Có thể cân nhắc hỗ trợ thêm nhóm DHA tự nhiên nếu cần thiết.'
+      ],
+      luu_y: [
+        'Cần loại trừ các yếu tố thiếu máu, thiếu vi chất nếu lờ đờ kéo dài.'
+      ]
+    }
+  },
+
+  // Bất ổn về dinh dưỡng
+  bat_on_ve_dinh_duong: {
+    tre_bieng_an: {
+      title: 'Trẻ biếng ăn (ăn ít, kén ăn)',
+      tinh_huong_thuong_gap: [
+        'Bé thường ăn rất ít trong mỗi bữa',
+        'Bé hay lười ăn rau, thịt cá',
+        'Thời gian ăn kéo dài'
+      ],
+      nguyen_nhan: [
+        'Sự thiếu hụt lâu ngày các đa vitamin và khoáng chất trong cơ thể khiến cơ thể ăn vào mà không hấp thu, lâu dần khiến trẻ biếng ăn- ngán ăn  và xuất hiện các bất ổn về sau. ',
+      ],
+      giai_phap: [
+        'Chia nhỏ bữa ăn, tạo thực đơn phong phú',
+        'Kết hợp dùng thêm men vi sinh hỗ trợ tiêu hóa (nếu cần)',
+        'Sử dụng sữa WOWTOP để bổ sung dinh dưỡng dễ hấp thu và đầy đủ nhóm chất'
+      ],
+      luu_y: [
+        
+      ]
+    },
+    tre_an_tot_nhung_hap_thu_kem: {
+      title: 'Trẻ ăn tốt nhưng hấp thu kém',
+      tinh_huong_thuong_gap: [
+        'Bé ăn đầy đủ nhưng vẫn gầy, không tăng cân',
+        'Bé hay bị rối loạn tiêu hóa nhẹ (phân sống, tiêu chảy, táo bón)'
+      ],
+      nguyen_nhan: [
+        'Sự thiếu hụt lâu ngày các đa vitamin và khoáng chất trong cơ thể khiến cơ thể ăn vào mà không hấp thu, lâu dần khiến trẻ biếng ăn- ngán ăn  và xuất hiện các bất ổn về sau. ',
+      ],
+      giai_phap: [
+        'Tăng cường nhóm thực phẩm dễ tiêu hóa (cháo, súp)',
+        'Bổ sung probiotics, prebiotics để cân bằng hệ vi sinh đường ruột',
+        'Dùng sữa WOWTOP giúp bổ sung dinh dưỡng cân đối, dễ hấp thu'
+      ],
+      luu_y: [
+
+      ]
+    },
+    tre_an_thien_lech: {
+      title: 'Trẻ ăn thiên lệch (chỉ thích ăn 1 nhóm thực phẩm)',
+      tinh_huong_thuong_gap: [
+        'Bé chỉ thích ăn cơm trắng, mì tôm, bánh kẹo',
+        'Bé ít hoặc không ăn rau xanh, trái cây'
+      ],
+      nguyen_nhan: [
+        'Sự thiếu hụt lâu ngày các đa vitamin và khoáng chất trong cơ thể khiến cơ thể ăn vào mà không hấp thu, lâu dần khiến trẻ biếng ăn- ngán ăn  và xuất hiện các bất ổn về sau. ',
+        'Trường hợp bé chỉ thích ăn cơm trắng, đồ ngọt .. vì nhóm chất này cung cấp thẳng năng lượng lên não nên khi bé không thích ăn các đồ ăn khác khiến cơ thể thiếu năng lượng thì não vẫn cần năng lượng từ đường để duy trì hoạt động.'
+      ],
+      giai_phap: [
+        'Hướng dẫn tập thói quen ăn đa dạng',
+        'Kết hợp WOWTOP để bù dinh dưỡng tổng thể',
+        'Tăng cường chất xơ từ rau củ, trái cây'
+      ],
+      luu_y: [
+
+      ]
+    },
+    tre_co_van_de_tieu_hoa_lau_ngay: {
+      title: 'Trẻ có vấn đề tiêu hóa lâu ngày',
+      tinh_huong_thuong_gap: [
+        'Bé hay đầy hơi, bụng trướng',
+        'Đi ngoài phân lỏng hoặc táo bón kéo dài'
+      ],
+      nguyen_nhan: [
+        'Sự thiếu hụt lâu ngày các đa vitamin và khoáng chất trong cơ thể khiến cơ thể ăn vào mà không hấp thu, lâu dần khiến trẻ biếng ăn- ngán ăn  và xuất hiện các bất ổn về sau. ',
+      ],
+      giai_phap: [
+        'Bổ sung men tiêu hóa, probiotics theo hướng dẫn',
+        'Dùng WOWTOP với lượng nhỏ ban đầu, sau đó tăng dần'
+      ],
+      luu_y: [
+
+      ]
+    },
+    tre_co_dau_hieu_thieu_vi_chat: {
+      title: 'Trẻ có dấu hiệu thiếu vi chất',
+      tinh_huong_thuong_gap: [
+        'Bé dễ cảm cúm, vết thương lâu lành',
+        'Hay bị mệt mỏi, da xanh xao'
+      ],
+      nguyen_nhan: [
+        'Sự thiếu hụt lâu ngày các đa vitamin và khoáng chất trong cơ thể khiến cơ thể ăn vào mà không hấp thu, lâu dần khiến trẻ biếng ăn- ngán ăn  và xuất hiện các bất ổn về sau. ',
+      ],
+      giai_phap: [
+        'Dùng các sản phẩm hỗ trợ tăng đề kháng',
+        'Bổ sung sữa WOWTOP giàu khoáng chất, vitamin chuẩn khoa học'
+      ],
+      luu_y: [
+        
+      ]
+    }
+  }
 }
