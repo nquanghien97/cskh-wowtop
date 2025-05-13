@@ -1,5 +1,7 @@
 import { Button, Form, Select } from 'antd'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { FormValuesConclude } from './types'
+import { useConcludeStore } from '@/stores/conclude.stores'
 
 interface HeaderProps {
   setTieuHoa: React.Dispatch<React.SetStateAction<"be_hay_tao_bon" | "be_hay_tieu_chay_nhe" | "be_an_uong_kho_tieu" | "be_hap_thu_kem" | undefined>>
@@ -9,25 +11,39 @@ interface HeaderProps {
   setDinhDuong: React.Dispatch<React.SetStateAction<"tre_bieng_an" | "tre_an_tot_nhung_hap_thu_kem" | "tre_an_thien_lech" | "tre_co_van_de_tieu_hoa_lau_ngay" | "tre_co_dau_hieu_thieu_vi_chat" | undefined>>
 }
 
-interface FormValues {
-  tieu_hoa: "be_hay_tao_bon" | "be_hay_tieu_chay_nhe" | "be_an_uong_kho_tieu" | "be_hap_thu_kem"
-  suc_de_khang: "be_hay_bi_om_vat" | "be_mac_benh_duong_ho_hap_man_tinh" | "be_suc_de_khang_kem_hay_met_moi"
-  bat_on_ve_giac_ngu: "be_kho_ngu_ngu_khong_sau_giac"
-  bat_on_ve_tinh_than: "be_cang_thang_de_cau_gat" | "be_lo_do_thieu_tap_trung"
-  bat_on_ve_dinh_duong: "tre_bieng_an" | "tre_an_tot_nhung_hap_thu_kem" | "tre_an_thien_lech" | "tre_co_van_de_tieu_hoa_lau_ngay" | "tre_co_dau_hieu_thieu_vi_chat"
-}
-
 function Header(props: HeaderProps) {
   const { setTieuHoa, setDeKhang, setGiacNgu, setTinhThan, setDinhDuong } = props
 
   const [form] = Form.useForm()
+  const { setConcludeData, concludeData, setIsSubmited, isSubmited } = useConcludeStore()
 
-  const onSubmit = (values: FormValues) => {
+  useEffect(() => {
+    form.setFieldsValue({
+      tieu_hoa: concludeData?.tieu_hoa,
+      suc_de_khang: concludeData?.suc_de_khang,
+      bat_on_ve_giac_ngu: concludeData?.bat_on_ve_giac_ngu,
+      bat_on_ve_tinh_than: concludeData?.bat_on_ve_tinh_than,
+      bat_on_ve_dinh_duong: concludeData?.bat_on_ve_dinh_duong,
+    })
+  }, [concludeData?.bat_on_ve_dinh_duong, concludeData?.bat_on_ve_giac_ngu, concludeData?.bat_on_ve_tinh_than, concludeData?.suc_de_khang, concludeData?.tieu_hoa, form])
+
+  useEffect(() => {
+    if (isSubmited && concludeData) {
+      setTieuHoa(concludeData.tieu_hoa)
+      setDeKhang(concludeData.suc_de_khang)
+      setGiacNgu(concludeData.bat_on_ve_giac_ngu)
+      setTinhThan(concludeData.bat_on_ve_tinh_than)
+      setDinhDuong(concludeData.bat_on_ve_dinh_duong)
+    }
+  }, [concludeData, isSubmited, setDeKhang, setDinhDuong, setGiacNgu, setTieuHoa, setTinhThan])
+  const onSubmit = (values: FormValuesConclude) => {
     setTieuHoa(values.tieu_hoa)
     setDeKhang(values.suc_de_khang)
     setGiacNgu(values.bat_on_ve_giac_ngu)
     setTinhThan(values.bat_on_ve_tinh_than)
     setDinhDuong(values.bat_on_ve_dinh_duong)
+    setConcludeData(values)
+    setIsSubmited(true)
   }
 
   return (

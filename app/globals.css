@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.tox-statusbar__right-container {
+  display: none !important;
+}
+
+.tox-notification {
+  display: none !important;
+}
+
+.tox-notification--in {
+  display: none !important;
+}
+
+.tox-notification--warning {
+  display: none !important;
+}
+
+.tox-tinymce {
+  flex: 1
+}
+
+.svg_loading {
+  animation: spin 1s linear infinite;
+
+  circle {
+    opacity: .25;
+  }
+  path {
+    opacity: .75;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn)
+  }
+}

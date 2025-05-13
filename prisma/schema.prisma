@@ -26,3 +26,15 @@ model user {
   role      USER_ROLE @default(USER)
   createdAt DateTime  @default(now())
 }
+
+model answer_customers {
+  id               Int      @id @default(autoincrement())
+  category         String
+  symptomCode      String
+  symptom          String
+  staffMessages    String
+  customerMessages String
+  content          String   @db.LongText
+  extraProducts    String?  @db.LongText
+  createdAt        DateTime @default(now())
+}
