@@ -9,6 +9,7 @@ import { getAnswerCustomers } from '@/services/answer-customers';
 import { Button, ConfigProvider, Empty, Table, TableColumnsType } from 'antd';
 import Delete from './actions/Delete';
 import Update from './actions/Update';
+import withAuth from '@/hocs/withAuth';
 
 function AnswerCustomers() {
 
@@ -185,4 +186,6 @@ function AnswerCustomers() {
   )
 }
 
-export default AnswerCustomers
+const AnswerCustomersWithAuth = withAuth(AnswerCustomers)
+
+export default AnswerCustomersWithAuth

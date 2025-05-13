@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import { data } from './data'
 import ArrowRight from '@/assets/icons/ArrowRight'
+import withAuth from '@/hocs/withAuth'
 
 function KetLuan() {
 
@@ -316,4 +317,6 @@ function KetLuan() {
   )
 }
 
-export default KetLuan
+const KetLuanWithAuth = withAuth(KetLuan)
+
+export default KetLuanWithAuth
