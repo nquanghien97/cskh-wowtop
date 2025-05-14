@@ -1,5 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import { Button, Form, Input, Modal } from "antd";
 import { createAnswerCustomers } from '@/services/answer-customers';
@@ -37,12 +37,16 @@ function Create(props: CreateProps) {
 
   const [form] = Form.useForm();
 
+  useEffect(() => {
+    if (open) {
+      setContent('');
+      setExtraProducts('');
+      form.resetFields();
+    }
+  }, [form, open])
+
   const handleClose = () => {
     onClose();
-    setContent('')
-    form.setFieldsValue({
-      category: '',
-    })
   }
 
   const onSubmit = async (data: FormValues) => {
