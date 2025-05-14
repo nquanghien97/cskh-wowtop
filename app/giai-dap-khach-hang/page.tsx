@@ -29,6 +29,7 @@ function AnswerCustomers() {
   useEffect(() => {
     (async () => {
       try {
+        setLoading(true)
         const res = await getAnswerCustomers({
           ...searchParams,
         })
@@ -36,6 +37,8 @@ function AnswerCustomers() {
         setTotal(res.total)
       } catch (err) {
         toast.error((err as Error).message)
+      } finally {
+        setLoading(false)
       }
     })()
   }, [searchParams, refreshKey])
@@ -48,6 +51,12 @@ function AnswerCustomers() {
       render: (_, __, index) => {
         return index + 1
       }
+    },
+    {
+      title: 'Nhóm biểu hiện',
+      key: '1.5',
+      width: 100,
+      dataIndex: 'category'
     },
     {
       title: 'Mã triệu chứng',
@@ -101,7 +110,7 @@ function AnswerCustomers() {
     {
       title: 'Tư vấn sản phẩm bổ sung',
       key: '7',
-      width: 150,
+      width: 100,
       dataIndex: 'extraProducts',
       render: (values) => {
         return (
@@ -142,7 +151,6 @@ function AnswerCustomers() {
   ]
 
   const onChange = async (page: number, pageSize: number) => {
-    setLoading(true);
     setSearchParams({ ...searchParams, page, pageSize });
   }
 
