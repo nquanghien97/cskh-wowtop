@@ -13,7 +13,7 @@ import withAuth from '@/hocs/withAuth';
 
 function AnswerCustomers() {
 
-  const [searchParams, setSearchParams] = useState<SearchParams>({ search: '', page: 1, pageSize: 10 });
+  const [searchParams, setSearchParams] = useState<SearchParams>({ search: '', page: 1, pageSize: 1 });
   const [refreshKey, setRefreshKey] = useState(false);
   const [datas, setDatas] = useState<AnswerCustomersEntity[]>([]);
   const [data, setData] = useState<AnswerCustomersEntity>();
@@ -49,7 +49,7 @@ function AnswerCustomers() {
       key: '1',
       width: 50,
       render: (_, __, index) => {
-        return index + 1
+        return (index + 1) + ((searchParams?.page ?? 1) - 1) * (searchParams?.pageSize ?? 1)
       }
     },
     {
