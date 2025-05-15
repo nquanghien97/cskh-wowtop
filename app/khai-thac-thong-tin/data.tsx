@@ -130,11 +130,17 @@ export const data: DataType[] = [
   {
     id: 6,
     title: 'Gen',
-    description: (
-      <div>
-        <p>Chiều cao của ba và mẹ hiện tại lần lượt là bao nhiêu cm?</p>
-      </div>
-    )
+    children: [
+      {
+        id: 61,
+        title: '',
+        description: (
+          <div>
+            <p>Chiều cao của ba và mẹ hiện tại lần lượt là bao nhiêu cm?</p>
+          </div>
+        )
+      }
+    ]
   },
   {
     id: 7,
@@ -163,44 +169,62 @@ export const data: DataType[] = [
   {
     id: 8,
     title: 'Đề kháng',
-    description: (
-      <div>
-        <ul className="list-disc ml-6">
-          <li>Con có tiền sử bệnh lý bẩm sinh hoặc mãn tính nào ko?</li>
-          <li>Con có hay bị ốm vặt  không? (Sốt, ho, viêm họng, tiêu chảy...) có hay bị viêm mũi dị ứng, đau họng khi thay đổi thời tiết không?</li>
-          <li>Con có bị dị ứng với gì không? (thức ăn, thuốc, thời tiết, côn trùng...)</li>
-        </ul>
-      </div>
-    )
+    children: [
+      {
+        id: 81,
+        title: '',
+        description: (
+          <div>
+            <ul className="list-disc ml-6">
+              <li>Con có tiền sử bệnh lý bẩm sinh hoặc mãn tính nào ko?</li>
+              <li>Con có hay bị ốm vặt  không? (Sốt, ho, viêm họng, tiêu chảy...) có hay bị viêm mũi dị ứng, đau họng khi thay đổi thời tiết không?</li>
+              <li>Con có bị dị ứng với gì không? (thức ăn, thuốc, thời tiết, côn trùng...)</li>
+            </ul>
+          </div>
+        )
+      }
+    ]
   },
   {
     id: 9,
     title: 'Dinh dưỡng, tiêu hóa',
-    description: (
-      <div>
-        <ul className="list-disc ml-6">
-          <li>Mẹ có là người trực tiếp chăm Con không? Đồ ăn ai nấu? Sữa ai pha? Có theo dõi từng ngày Con ăn uống như thế nào không?</li>
-          <li>Con có thường xuyên gặp vấn đề về tiêu hóa? (VD: đầy hơi, táo bón, tiêu chảy...)</li>
-          <li>Con ăn xong có bị đầy bụng, đau bụng ko?</li>
-          <li>Con đi tiêu bao nhiêu lần/ngày?</li>
-          <li>Tính chất phân của Con thường là: mềm / táo / lỏng / thay đổi thất thường?</li>
-          <li>Con có biểu hiện biếng ăn, chán ăn không?</li>
-          <li>Mỗi ngày Con ăn mấy bữa chính và bữa phụ?</li>
-          <li>Con có ăn đủ 4 nhóm thực phẩm không? (tinh bột, đạm, rau, trái cây)</li>
-          <li>Con có chỉ thích ăn 1 số món ko? Món gì ạ</li>
-        </ul>
-      </div>
-    )
+    children: [
+      {
+        id: 91,
+        title: '',
+        description: (
+          <div>
+            <ul className="list-disc ml-6">
+              <li>Mẹ có là người trực tiếp chăm Con không? Đồ ăn ai nấu? Sữa ai pha? Có theo dõi từng ngày Con ăn uống như thế nào không?</li>
+              <li>Con có thường xuyên gặp vấn đề về tiêu hóa? (VD: đầy hơi, táo bón, tiêu chảy...)</li>
+              <li>Con ăn xong có bị đầy bụng, đau bụng ko?</li>
+              <li>Con đi tiêu bao nhiêu lần/ngày?</li>
+              <li>Tính chất phân của Con thường là: mềm / táo / lỏng / thay đổi thất thường?</li>
+              <li>Con có biểu hiện biếng ăn, chán ăn không?</li>
+              <li>Mỗi ngày Con ăn mấy bữa chính và bữa phụ?</li>
+              <li>Con có ăn đủ 4 nhóm thực phẩm không? (tinh bột, đạm, rau, trái cây)</li>
+              <li>Con có chỉ thích ăn 1 số món ko? Món gì ạ</li>
+            </ul>
+          </div>
+        )
+      }
+    ]
   },
   {
     id: 10,
     title: 'Môi trường',
-    description: (
-      <div>
-        <p>Con đang sống ở đâu? (nhà riêng, chung cư, nhà thuê, ở cùng ông bà...)</p>
-        <p>Không gian sống có đủ ánh sáng tự nhiên và thông thoáng không?</p>
-      </div>
-    )
+    children: [
+      {
+        id: 101,
+        title: '',
+        description: (
+          <div>
+            <p>Con đang sống ở đâu? (nhà riêng, chung cư, nhà thuê, ở cùng ông bà...)</p>
+            <p>Không gian sống có đủ ánh sáng tự nhiên và thông thoáng không?</p>
+          </div>
+        )
+      }
+    ]
   },
   {
     id: 11,
@@ -230,24 +254,36 @@ export const data: DataType[] = [
   {
     id: 12,
     title: 'Vận động',
-    description: (
-      <div>
-        <p>Mỗi ngày Con vận động khoảng bao lâu?</p>
-        <p>Con có thích tham gia vận động ko? Con thường tham gia hoạt động thể chất nào</p>
-        <p>Con có cảm thấy mệt, đau khớp hay khó chịu sau khi vận động không?</p>
-      </div>
-    )
+    children: [
+      {
+        id: 121,
+        title: '',
+        description: (
+          <div>
+            <p>Mỗi ngày Con vận động khoảng bao lâu?</p>
+            <p>Con có thích tham gia vận động ko? Con thường tham gia hoạt động thể chất nào</p>
+            <p>Con có cảm thấy mệt, đau khớp hay khó chịu sau khi vận động không?</p>
+          </div>
+        )
+      }
+    ]
   },
   {
     id: 13,
     title: 'Tinh thần',
-    description: (
-      <div>
-        <p>Con hay cáu bẳn, giận dỗi vô cớ?</p>
-        <p>Con có bị áp lực về chuyện học hành?</p>
-        <p>Con có học hành ko tập trung?</p>
-        <p>Con có buồn ngủ ban ngày?</p>
-      </div>
-    )
+    children: [
+      {
+        id: 131,
+        title: '',
+        description: (
+          <div>
+            <p>Con hay cáu bẳn, giận dỗi vô cớ?</p>
+            <p>Con có bị áp lực về chuyện học hành?</p>
+            <p>Con có học hành ko tập trung?</p>
+            <p>Con có buồn ngủ ban ngày?</p>
+          </div>
+        )
+      }
+    ]
   }
 ]

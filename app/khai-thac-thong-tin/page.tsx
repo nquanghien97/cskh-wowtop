@@ -8,7 +8,6 @@ import MessageIcon from '@/assets/icons/MessageIcon'
 function KhaiThacThongTin() {
 
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>({})
-  const [expandedDescriptions, setExpandedDescriptions] = useState<Record<number, boolean>>({})
 
   useEffect(() => {
     document.title = "Khai thác thông tin"
@@ -21,18 +20,10 @@ function KhaiThacThongTin() {
     }))
   }
 
-  const toggleDescription = (id: number) => {
-    setExpandedDescriptions((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }))
-  }
-
   const renderItem = (item: DataType, level = 0) => {
     const hasChildren = item.children && item.children.length > 0
     const hasDescription = !!item.description
     const isExpanded = expandedItems[item.id] || false
-    const isDescriptionExpanded = expandedDescriptions[item.id] || false
 
     return (
       <div key={item.id} className="mb-2">
@@ -46,25 +37,13 @@ function KhaiThacThongTin() {
           <div
             className="flex-grow p-3"
             onClick={() => {
-              if (hasChildren) {
-                toggleItem(item.id)
-              } else if (hasDescription) {
-                toggleDescription(item.id)
-              }
+              toggleItem(item.id)
             }}
           >
             <div className="flex items-start gap-2">
-              {hasChildren ? (
-                <div className="mt-1 flex-shrink-0">
-                  {isExpanded ? <ArrowRight className="h-4 w-4 rotate-90 duration-300" /> : <ArrowRight className="h-4 w-4 duration-300" />}
-                </div>
-              ) : hasDescription ? (
-                <div className="mt-1 flex-shrink-0">
-                  {isDescriptionExpanded ? <ArrowRight className="h-4 w-4 rotate-90 duration-300" /> : <ArrowRight className="h-4 w-4 duration-300" />}
-                </div>
-              ) : (
-                <div className="w-4" />
-              )}
+              <div className="mt-1 flex-shrink-0">
+                {isExpanded ? <ArrowRight className="h-4 w-4 rotate-90 duration-300" /> : <ArrowRight className="h-4 w-4 duration-300" />}
+              </div>
               <div>
                 <div className="font-medium">{item.title}</div>
               </div>
@@ -72,18 +51,21 @@ function KhaiThacThongTin() {
           </div>
         </div>
 
-        {hasDescription && isDescriptionExpanded && (
-          <div className="mt-1 ml-6 p-3 bg-gray-50 rounded-md border border-black">
-            <div className="flex items-center text-xl mb-2">
-              <MessageIcon className="h-5 w-5" />
-              <span className=" ml-1 font-medium">Kịch bản:</span>
+        {isExpanded && (
+          item.children!.map(child => (
+            <div key={child.id}>
+              <div className="mt-1 ml-6 p-3 bg-gray-50 rounded-md border border-black">
+                <div className="mb-2">
+                  <p className="text-xl font-semibold">{child.title}</p>
+                </div>
+                <div className="flex items-center text-xl mb-2">
+                  <MessageIcon className="h-5 w-5" />
+                  <span className=" ml-1 font-medium">Kịch bản:</span>
+                </div>
+                <div className="prose prose-sm max-w-none">{child.description}</div>
+              </div>
             </div>
-            <div className="prose prose-sm max-w-none">{item.description}</div>
-          </div>
-        )}
-
-        {hasChildren && isExpanded && (
-          <div className="mt-2 ml-6 space-y-2">{item.children!.map((child) => renderItem(child, level + 1))}</div>
+          ))
         )}
       </div>
     )
