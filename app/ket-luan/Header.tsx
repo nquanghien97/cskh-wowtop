@@ -64,6 +64,7 @@ function Header(props: HeaderProps) {
                 { value: 'be_an_uong_kho_tieu', label: 'Bé ăn uống khó tiêu' },
                 { value: 'be_hap_thu_kem', label: 'Bé hấp thu kém (chậm tăng cân)' },
               ]}
+              popupMatchSelectWidth={false}
               showSearch
             />
           </Form.Item>
@@ -80,6 +81,7 @@ function Header(props: HeaderProps) {
                 { value: 'be_mac_benh_duong_ho_hap_man_tinh', label: 'Bé mắc bệnh đường hô hấp mạn tính (viêm mũi, viêm phế quản tái đi tái lại)' },
                 { value: 'be_suc_de_khang_kem_hay_met_moi', label: 'Bé sức đề kháng kém, hay mệt mỏi' },
               ]}
+              popupMatchSelectWidth={false}
               showSearch
             />
           </Form.Item>
@@ -94,6 +96,7 @@ function Header(props: HeaderProps) {
               options={[
                 { value: 'be_kho_ngu_ngu_khong_sau_giac', label: 'Bé khó ngủ, ngủ không sâu giấc' },
               ]}
+              popupMatchSelectWidth={false}
               showSearch
             />
           </Form.Item>
@@ -109,6 +112,7 @@ function Header(props: HeaderProps) {
                 { value: 'be_cang_thang_de_cau_gat', label: 'Bé căng thẳng, dễ cáu gắt' },
                 { value: 'be_lo_do_thieu_tap_trung', label: 'Bé lờ đờ, thiếu tập trung' },
               ]}
+              popupMatchSelectWidth={false}
               showSearch
             />
           </Form.Item>
@@ -127,6 +131,7 @@ function Header(props: HeaderProps) {
                 { value: 'tre_co_van_de_tieu_hoa_lau_ngay', label: 'Trẻ có vấn đề tiêu hóa lâu ngày' },
                 { value: 'tre_co_dau_hieu_thieu_vi_chat       ', label: 'Trẻ có dấu hiệu thiếu vi chất' },
               ]}
+              popupMatchSelectWidth={false}
               showSearch
             />
           </Form.Item>
