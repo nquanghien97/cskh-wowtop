@@ -56,6 +56,7 @@ function Header(props: HeaderProps) {
             name="tieu_hoa"
           >
             <Select
+              allowClear
               className="w-full"
               placeholder="Chọn tình trạng"
               options={[
@@ -74,6 +75,7 @@ function Header(props: HeaderProps) {
             name="suc_de_khang"
           >
             <Select
+              allowClear
               className="w-full"
               placeholder="Chọn tình trạng"
               options={[
@@ -91,6 +93,7 @@ function Header(props: HeaderProps) {
             name="bat_on_ve_giac_ngu"
           >
             <Select
+              allowClear
               className="w-full"
               placeholder="Chọn tình trạng"
               options={[
@@ -106,6 +109,7 @@ function Header(props: HeaderProps) {
             name="bat_on_ve_tinh_than"
           >
             <Select
+              allowClear
               className="w-full"
               placeholder="Chọn tình trạng"
               options={[
@@ -122,6 +126,7 @@ function Header(props: HeaderProps) {
             name="bat_on_ve_dinh_duong"
           >
             <Select
+              allowClear
               className="w-full"
               placeholder="Chọn tình trạng"
               options={[

@@ -1,3 +1,12 @@
+export interface DataType {
+  title: string
+  detail_title?: string
+  tinh_huong_thuong_gap: string[]
+  nguyen_nhan: string[]
+  giai_phap: string[]
+  luu_y: string[]
+}
+
 export const data = {
   //Tiêu hóa
   tieu_hoa: {
@@ -220,7 +229,9 @@ export const data = {
         'Sử dụng sữa WOWTOP để bổ sung dinh dưỡng dễ hấp thu và đầy đủ nhóm chất'
       ],
       luu_y: [
-        
+        'Chia nhỏ bữa ăn, tạo thực đơn phong phú.',
+        'Kết hợp dùng thêm men vi sinh hỗ trợ tiêu hóa (nếu cần).',
+        'Sử dụng sữa WOWTOP để bổ sung dinh dưỡng dễ hấp thu và đầy đủ nhóm chất.'
       ]
     },
     tre_an_tot_nhung_hap_thu_kem: {
@@ -238,7 +249,9 @@ export const data = {
         'Dùng sữa WOWTOP giúp bổ sung dinh dưỡng cân đối, dễ hấp thu'
       ],
       luu_y: [
-
+        'Tăng cường nhóm thực phẩm dễ tiêu hóa (cháo, súp).',
+        'Bổ sung probiotics, prebiotics để cân bằng hệ vi sinh đường ruột.',
+        'Dùng sữa WOWTOP giúp bổ sung dinh dưỡng cân đối, dễ hấp thu.'
       ]
     },
     tre_an_thien_lech: {
@@ -257,7 +270,9 @@ export const data = {
         'Tăng cường chất xơ từ rau củ, trái cây'
       ],
       luu_y: [
-
+        'Hướng dẫn tập thói quen ăn đa dạng.',
+        'Kết hợp WOWTOP để bù dinh dưỡng tổng thể.',
+        'Tăng cường chất xơ từ rau củ, trái cây.'
       ]
     },
     tre_co_van_de_tieu_hoa_lau_ngay: {
@@ -274,7 +289,8 @@ export const data = {
         'Dùng WOWTOP với lượng nhỏ ban đầu, sau đó tăng dần'
       ],
       luu_y: [
-
+        'Bổ sung men tiêu hóa, probiotics theo hướng dẫn.',
+        'Dùng WOWTOP với lượng nhỏ ban đầu, sau đó tăng dần.'
       ]
     },
     tre_co_dau_hieu_thieu_vi_chat: {
@@ -291,7 +307,8 @@ export const data = {
         'Bổ sung sữa WOWTOP giàu khoáng chất, vitamin chuẩn khoa học'
       ],
       luu_y: [
-        
+        'Dùng các sản phẩm hỗ trợ tăng đề kháng.',
+        'Bổ sung sữa WOWTOP giàu khoáng chất, vitamin chuẩn khoa học.'
       ]
     }
   }
