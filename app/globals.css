@@ -39,3 +39,47 @@
     transform: rotate(1turn)
   }
 }
+
+.bg-insight-item {
+  background: linear-gradient(to right, rgba(225, 183, 84, 0.3), rgba(235, 201, 130, 0.3), rgba(251, 248, 208, 0.3));
+}
+
+.ant-modal-content {
+  background: linear-gradient(to right, #ebc9824d, #fbf8d04d, #e1b7544d, #f3c86d4d);
+  padding: 0 !important;
+}
+
+.custom-bg {
+  background: linear-gradient(to right, rgba(235, 201, 130, 0.6), rgba(251, 248, 208, 0.6), rgba(225, 183, 84, 0.6), rgba(243, 200, 109, 0.6));
+}
+
+.bg-liner {
+  background: linear-gradient(to right, #0D2D95, #0C63C6);
+}
+
+.arrow-stage-1 {
+  background: linear-gradient(
+    to right,
+    rgba(255, 153, 0, 1),
+    rgba(255, 179, 0, 1),
+    rgba(255, 217, 0, 1)
+  );
+}
+
+.arrow-stage-2 {
+  background: linear-gradient(
+    to right,
+    rgba(102, 0, 153, 1),
+    rgba(140, 41, 197, 1),
+    rgba(178, 82, 240, 1)
+  );
+}
+
+.arrow-stage-3 {
+  background: linear-gradient(
+    to right,
+    rgba(0, 102, 204, 1),
+    rgba(0, 92, 204, 1),
+    rgba(0, 82, 204, 1)
+  );
+}

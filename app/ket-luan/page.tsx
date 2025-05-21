@@ -28,14 +28,6 @@ function KetLuan() {
   const dataTinhThan = tinhThan && data.bat_on_ve_tinh_than[tinhThan]
   const dataDinhDuong = dinhDuong && data.bat_on_ve_dinh_duong[dinhDuong]
 
-  console.log({
-    dataTieuHoa,
-    dataDeKhang,
-    dataGiacNgu,
-    dataTinhThan,
-    dataDinhDuong
-  })
-
   return (
     <div className="p-4">
       <h2 className="text-center mb-6 text-4xl font-semibold">Kết luận</h2>
@@ -46,7 +38,7 @@ function KetLuan() {
         setTinhThan={setTinhThan}
         setDinhDuong={setDinhDuong}
       />
-      {(dataDeKhang || dataGiacNgu || dataTinhThan || dataDinhDuong || dataTieuHoa) && (
+      {(dataDeKhang || dataGiacNgu || dataTinhThan || dataDinhDuong || dataTieuHoa) ? (
         <table className="border-collapse border border-blue-500 w-full mb-4">
           <thead>
             <tr className="bg-[#f3ec90]">
@@ -75,6 +67,10 @@ function KetLuan() {
             )}
           </tbody>
         </table>
+      ): (
+        <div>
+          <p className="text-center">Chọn trường hợp để xem chi tiết</p>
+        </div>
       )}
     </div>
   )

@@ -56,6 +56,12 @@ export const menuSidebar: MenuType[] = [
     icon: <BanIcon width={16} height={16} />,
     allowRole: ['ADMIN', 'USER']
   },
+  {
+    title: 'Hồ sơ khách hàng',
+    url: '/ho-so-khach-hang',
+    icon: <FilesIcon width={16} height={16} />,
+    allowRole: ['ADMIN', 'USER'],
+  },
   // {
   //   title: 'Quản lý tư liệu',
   //   url: '#',
